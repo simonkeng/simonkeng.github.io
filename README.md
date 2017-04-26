@@ -6,13 +6,13 @@
 
 get file_path size
 
-`du -sh file_path`
+    du -sh file_path
 
 [more info](https://unix.stackexchange.com/questions/185764/how-do-i-get-the-size-of-a-directory-on-the-command-line)
 
 save bash history to a file
 
-`history > foo.txt`
+    history > foo.txt
 
 ## grep
 
