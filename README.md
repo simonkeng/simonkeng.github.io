@@ -157,6 +157,30 @@ email [me](simonkeng@me.com)
     (githubpages) [~/Projects/simonkeng.github.io] ls | grep a
     (githubpages) [~/Projects/simonkeng.github.io] ls | grep A
     README.md
+    (githubpages) [~/Projects/simonkeng.github.io] git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    (githubpages) [~/Projects/simonkeng.github.io] git add --all
+    (githubpages) [~/Projects/simonkeng.github.io] git commit -m "more to readme"
+    [master 09bebef] more to readme
+     1 file changed, 74 insertions(+), 2 deletions(-)
+    (githubpages) [~/Projects/simonkeng.github.io] git push -u origin master
+    Counting objects: 3, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 1.35 KiB | 0 bytes/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    To https://github.com/simonkeng/simonkeng.github.io.git
+       2055b1d..09bebef  master -> master
+    Branch master set up to track remote branch master from origin.
+    (githubpages) [~/Projects/simonkeng.github.io]
 
 
 
