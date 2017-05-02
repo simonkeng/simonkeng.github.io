@@ -1,34 +1,50 @@
-# bash
+# Command Line Jiu Jitsu
 
 
 -----
 
 
-get file_path size
+## bash
+
+estimate the size of `file_path`
 
     du -sh file_path
 
+
+estimate the size of every directory or file in the current directory
+
+    du -sh *
+
 [more info](https://unix.stackexchange.com/questions/185764/how-do-i-get-the-size-of-a-directory-on-the-command-line)
+
 
 save bash history to a file
 
     history > foo.txt
 
+
+
+
 ## grep
 
-list all lines that contain a string matching "foo" in "file.txt"
+list all lines that contain a string matching `foo` in `file.txt`
 
-`grep foo file.txt`
+    grep foo file.txt
 
-`grep -n foo file.txt` to see the line number
+    grep -n foo file.txt
+
+–to see the line number.
 
 
 
-list all files in a directory called "blah"
+list all files in the current directory called or containing `blah`
 
-`ls | grep blah` searches for a file name containing "blah", in the current directory.
+    ls | grep blah
 
-`ls /path/to/greatness/ | grep 9xyz` searches /path/to/greatness/ for a file containing "9xyz" in its name.
+searches /path/to/greatness/ for a file containing "9xyz" in its name.
+
+    ls /path/to/greatness/ | grep 9xyz
+
 
 
 
@@ -37,20 +53,31 @@ list all files in a directory called "blah"
 
 compress everything in current directory, as "foo.zip"
 
-`zip -r foo.zip .`
+    zip -r foo.zip .
+
 
 extract "foo.zip"
 
-`unzip foo.zip`
+    unzip foo.zip
+
+
+
+## pip
+
+find out what pip packages are installed
+
+    pip freeze
+
+if you want to save your pip packages in a file, e.g. `requirements.txt`
+
+    pip freeze > requirements.txt
+
+`requirements.txt` will be generated in the current working directory
 
 
 
 
-
-
-
-
-# vim (vi)
+# vim
 
 
 -----
@@ -107,99 +134,41 @@ extract "foo.zip"
 
 
 
+### colorful vim
+
+    $ cd ~
+    $ echo "syntax on" > .vimrc
+
+you can even choose your own [color scheme](http://alvinalexander.com/linux/vi-vim-editor-color-scheme-colorscheme), if the default vim color is not to your liking
+
+
+
+## cryptography
+
+generate a password using openSSL
+
+    openssl rand -base64 48 | cut -c1-${1}
+
+–you may specify character length too, here it is 48.
+
+use alias for making a password generator
+
+    $ cd ~
+    $ echo "alias pgen='openssl rand -base64 48 | cut -c1-${1}'" > .bash_profile
+
+in a new terminal
+
+    $ pgen
+    $ sp8RiuHA+FbTDP/P7YUL7WWEgKTnfT2NjbT2JOf657O94Zvto/q1r7A3ctbPc9qc
+
+
 
 
 
 
 #### Questions?
 
-email [me](simonkeng@me.com)
-
-    [~] cd P
-    Pictures/ Projects/ Public/
-    [~] cd Projects/
-    [~/Projects] cd simonkeng.github.io/
-    [~/Projects/simonkeng.github.io] ls
-    README.md   _config.yml
-    [~/Projects/simonkeng.github.io] du -sh .
-    224K    .
-    [~/Projects/simonkeng.github.io] githubpages
-    (githubpages) [~/Projects/simonkeng.github.io] pip freeze
-    appdirs==1.4.3
-    packaging==16.8
-    pyparsing==2.2.0
-    six==1.10.0
-    (githubpages) [~/Projects/simonkeng.github.io] git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    nothing to commit, working directory clean
-    (githubpages) [~/Projects/simonkeng.github.io] echo "# new feature" > foo.txt
-    (githubpages) [~/Projects/simonkeng.github.io] ls
-    README.md   _config.yml foo.txt
-    (githubpages) [~/Projects/simonkeng.github.io] git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Untracked files:
-      (use "git add <file>..." to include in what will be committed)
-
-        foo.txt
-
-    nothing added to commit but untracked files present (use "git add" to track)
-    (githubpages) [~/Projects/simonkeng.github.io] rm foo.txt
-    (githubpages) [~/Projects/simonkeng.github.io] ls
-    README.md   _config.yml
-    (githubpages) [~/Projects/simonkeng.github.io] ls | grep m
-    README.md
-    _config.yml
-    (githubpages) [~/Projects/simonkeng.github.io] ls | grep .
-    README.md
-    _config.yml
-    (githubpages) [~/Projects/simonkeng.github.io] ls | grep a
-    (githubpages) [~/Projects/simonkeng.github.io] ls | grep A
-    README.md
-    (githubpages) [~/Projects/simonkeng.github.io] git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes not staged for commit:
-      (use "git add <file>..." to update what will be committed)
-      (use "git checkout -- <file>..." to discard changes in working directory)
-
-        modified:   README.md
-
-    no changes added to commit (use "git add" and/or "git commit -a")
-    (githubpages) [~/Projects/simonkeng.github.io] git add --all
-    (githubpages) [~/Projects/simonkeng.github.io] git commit -m "more to readme"
-    [master 09bebef] more to readme
-     1 file changed, 74 insertions(+), 2 deletions(-)
-    (githubpages) [~/Projects/simonkeng.github.io] git push -u origin master
-    Counting objects: 3, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (3/3), done.
-    Writing objects: 100% (3/3), 1.35 KiB | 0 bytes/s, done.
-    Total 3 (delta 0), reused 0 (delta 0)
-    To https://github.com/simonkeng/simonkeng.github.io.git
-       2055b1d..09bebef  master -> master
-    Branch master set up to track remote branch master from origin.
-    (githubpages) [~/Projects/simonkeng.github.io]
+email [me](simon.keng@schrodinger.com)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------
