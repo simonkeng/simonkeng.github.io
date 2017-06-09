@@ -202,7 +202,7 @@ Find more information [here](http://www.makeuseof.com/tag/5-things-need-put-vim-
 
 ### convert image to searchable PDF
 
-First take your patent or paper image, and convert it to a TIFF. On macOS, within the Preview application, go to File > Export, in the pop up window choose:
+First take your patent or article image, and convert it to a TIFF. On macOS, within the Preview application, go to File > Export, in the pop up window choose:
 Format: TIFF
 Compression: None
 Resolution: 300 pixels/inch
