@@ -214,21 +214,30 @@ Then from the command line
 
 	tesseract patent123.tif output123 pdf
 
-–tesseract will provide a readout to STDOUT while the OCR is running.
+–tesseract will provide a readout to STDOUT while the OCR is running. If Preview fails to export your image as a TIFF, then compression might be the solution. Choose compression: JPEG – and the command would become
 
-If you would rather produce a text file
+  tesseract patent123.jpg output123 pdf
+
+The simplest example is to OCR an image and output a text file
 
 	tesseract patent123.tif output123
+
+–the default output for tesseract is `.txt` format. 
 
 ### OCR in other languages
 
 Default `lang` is english, but you can run tesseract with the `-l` flag and specify another language. Here is a list of common languages you might come accross, with their 3-charater ISO 639-2 language codes. For a full list of language codes, visit the [man page here.](https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc)
 
 `deu` German
+
 `fra` French
+
 `jpn` Japanese
+
 `kor` Korean
+
 `chi_sim` Chinese simplified
+
 `chi_tra` Chinese traditional
 
 Example:
