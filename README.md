@@ -214,15 +214,17 @@ Then from the command line
 
 	tesseract patent123.tif output123 pdf
 
-–tesseract will provide a readout to STDOUT while the OCR is running. If Preview fails to export your image as a TIFF, then compression might be the solution. Choose compression: JPEG – and the command would become
+tesseract will provide a readout to STDOUT while the OCR is running.
 
-  tesseract patent123.jpg output123 pdf
+Note: If Preview fails to export your image as a TIFF, then compression might be the solution. Choose compression: JPEG – and from the command line
 
-The simplest example is to OCR an image and output a text file
+    tesseract patent123.jpg output123 pdf
+
+Another example is to go from `.png`, `.jpg`, `.tiff` ---> `.txt`.  With tesseract this task is trivial.
 
 	tesseract patent123.tif output123
 
-–the default output for tesseract is `.txt` format. 
+–the default output for tesseract is `.txt` format.
 
 ### OCR in other languages
 
