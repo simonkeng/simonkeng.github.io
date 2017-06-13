@@ -2,9 +2,28 @@
 
 # Command Line Jiu Jitsu
 
-
+Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), adapted for *DDAG data team* users and anyone new to **bash**.
 
 -----
+
+# Ag
+
+Use `ag` to recursively search for `pattern` in `path`, similiar to grep or ack, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher).
+
+### install
+
+	brew install the_silver_searcher
+
+Once downloaded, `man ag` will provide all the information you need about using this tool, like applying regex, counts, columns, or showing only file names.
+
+### how to use it
+
+	ag ABC1 ~/Users/keng/Projects/
+
+–where `ag` will search for the string `ABC1` in all the files and file names, recursively, down from `Projects/` to the very bottom of the directory tree.
+
+
+----------
 
 
 # disk usage
@@ -21,13 +40,7 @@ Estimate the size of every directory or file in the current directory
 For more information visit this [stack exchange post](https://unix.stackexchange.com/questions/185764/how-do-i-get-the-size-of-a-directory-on-the-command-line).
 
 
-Save your bash history to a file
-
-    history > foo.txt
-
-
 ----------
-
 
 # grep
 
@@ -53,37 +66,15 @@ Search /path/to/something/ for a file containing "9xyz" in its name.
 ----------
 
 
-# the silver searcher
+# history
 
-Use `ag` to recursively search for `pattern` in `path`, similiar to grep or ack, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher).
+Save your bash history to a file
 
-### install
+    history > foo.txt
 
-	brew install the_silver_searcher
+Find out which commands you use most often
 
-Once downloaded, `man ag` will provide all the information you need about using this tool, like applying regex, counts, columns, or showing only file names.
-
-### how to use it
-
-	ag ABC1 ~/Users/keng/Projects/
-
-–where `ag` will search for the string `ABC1` in all the files and file names, recursively, down from `Projects/` to the very bottom of the directory tree.
-
-
-----------
-
-
-# zip
-
-Compress everything in current directory, as "foo.zip"
-
-    zip -r foo.zip .
-
-
-extract "foo.zip"
-
-    unzip foo.zip
-
+	history | awk '{print $2}' | sort | uniq -c | sort -rn | head
 
 ----------
 
@@ -103,92 +94,6 @@ If you want to save your pip packages in a file, e.g. `requirements.txt`
 
 ----------
 
-
-# vim / vi
-
-
-### navigation
-
-`h` move cursor left
-
-`l` move cursor right
-
-`k` up
-
-`j` down
-
-`H` move to top of screen
-
-`M` move to middle
-
-`L` bottom
-
-`$` jump to the end of a line
-
-`O` jump to the start of a line
-
-`G` jump to the last line of the document
-
-`gg` jump to the first line of the document
-
-
-### copy & paste
-
-`yy` copy (yank) a line
-
-`p` paste (put) from clipboard at position after cursor
-
-`dd` cut (delete) a line
-
-`x` cut a character
-
-
-### saving
-
-`:w` save (write) the file
-
-`:wq` save and quit
-
-`:q` quit
-
-`:q!` quit and toss away unsaved changes
-
-`:saveas file` save as file
-
-`:help keyboard` open help
-
-For more information on vim and vi commands, usage, and to understand the vi language, visit this helpful [stack overflow post](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim?page=1&tab=votes#tab-top).
-
-## vim enhancements
-
-### color
-
-    $ cd ~
-    $ echo "syntax on" > .vimrc
-
-You can even choose your own [color scheme](http://alvinalexander.com/linux/vi-vim-editor-color-scheme-colorscheme), if the default vim color is not to your liking.
-
-### line numbers and tabs
-
-Here are some other vim settings to enrich the experience:
-
-    $ cd ~
-    $ vim .vimrc
-
-and add the following lines
-
-    set number
-    set expandtab
-    set tabstop=4
-    set softtabstop=4
-    set shiftwidth=4
-    set autoindent
-    set showmatch
-
-Find more information [here](http://www.makeuseof.com/tag/5-things-need-put-vim-config-file/).
-
-
-----------
 
 
 # tesseract OCR
@@ -274,7 +179,104 @@ in a new terminal
 
 ----------
 
+# vi & vim
+
+The following simplified list of commands are for getting up and running fast, for more thorough vi cheat sheets see the links [here](http://www.viemu.com/vi-vim-cheat-sheet.gif) and [here](http://www.fprintf.net/vimCheatSheet.html).
+
+### running vi or vim
+	$ vim
+or
+
+	$ vi
+
+–the editor will open, to enter 'insert mode' type `i` and enter in some text. To save and quit, press `ESC` followed by `:` then enter the letters `w` (for write or save) and `q` (for quit) then press enter.
+
+Note: [difference between vim and vi?](https://askubuntu.com/questions/418396/what-is-the-difference-between-vi-and-vim)
+
+### navigation
+
+`h` move cursor left
+
+`l` move cursor right
+
+`k` up
+
+`j` down
+
+`H` move to top of screen
+
+`L` move to bottom
+
+`$` jump to the end of a line
+
+`O` jump to the start of a line
+
+`G` jump to the last line of the document
+
+`gg` jump to the first line of the document
+
+
+### saving
+
+`:w` save (write) the file
+
+`:wq` save and quit
+
+`:q` quit
+
+`:q!` quit and toss away unsaved changes
+
+`:saveas file` save as file
+
+`:help keyboard` open help
+
+For more information on vim and vi commands, usage, and to understand the vi language, visit this **very very** helpful [stack overflow post](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim?page=1&tab=votes#tab-top).
+
+## vim enhancements
+
+### color
+
+    $ cd ~
+    $ echo "syntax on" > .vimrc
+
+You can even choose your own [color scheme](http://alvinalexander.com/linux/vi-vim-editor-color-scheme-colorscheme).
+
+### line numbers and tabs
+
+Here are some other vim settings to enrich the experience:
+
+    $ cd ~
+    $ vim .vimrc
+
+and add the following lines
+
+    set number
+    set expandtab
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
+    set autoindent
+    set showmatch
+
+Find more information [here](http://www.makeuseof.com/tag/5-things-need-put-vim-config-file/).
+
+
+----------
+
+# zip
+
+Compress everything in current directory, as "foo.zip"
+
+    zip -r foo.zip .
+
+
+extract "foo.zip"
+
+    unzip foo.zip
+
+
+----------
 
 #### Questions?
 
-[Email me](simon.keng@schrodinger.com)
+Please [email me](simon.keng@schrodinger.com) any recommendations or suggestions.
