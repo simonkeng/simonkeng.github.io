@@ -65,6 +65,26 @@ Search /path/to/something/ for a file containing "9xyz" in its name.
 
 ----------
 
+# cat
+
+If you want to smash several files together, try using `cat`. Here we have three CSVs in our working directory.
+
+	$ ls
+    one.csv
+    two.csv
+    three.csv
+    $ cat *.csv >> all.csv
+
+then to sort the output by unique lines with `sort -u`
+
+	$ sort -u all.csv > sorted_all.csv
+
+Note: `>` will overwrite, `>>` will append.
+
+
+
+----------
+
 
 # history
 
