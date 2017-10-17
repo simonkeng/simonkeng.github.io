@@ -205,6 +205,7 @@ The following simplified list of commands are for getting up and running fast, f
 
 ### running vi or vim
 	$ vim
+
 or
 
 	$ vi
