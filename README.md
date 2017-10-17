@@ -297,6 +297,107 @@ extract "foo.zip"
 
 ----------
 
+# git
+
+This is a breif outline of the basic git commands used in a trivial case. 
+
+### clone a remote repo
+
+    git clone something
+
+Makes a local copy of the remote repo _somehting_.
+
+### make your own branch
+
+    git checkout -b my_branch
+
+Makes a new branch in your local cloned repo, and swiches from master branch to your newly created branch. 
+
+### list branches
+
+    git branch
+
+List the local branches, and notes the current branch you are in. To list local and remote branches, use `git branch -a`.
+
+### pushing to remote repo
+
+    git push origin my_branch
+
+Pushes the new branch to the remote repo, other users can now access your branch, but only if your report repo is accessible to them. 
+
+### switch to another branch
+
+    git checkout branch_name
+
+Switch to branch_name.
+
+### merging branches
+
+If you want to merge changes from master with your local changes in your branch, then do:
+
+    git checkout my_branch
+
+..navegate to my_branch
+
+    git merge master
+
+..and merge with master, which pulls commits from master into the active local branch, my_branch. 
+
+### view git logs
+
+    git log
+
+Will display the record of commits. 
+
+### undo local changes
+
+    git checkout -- {filename}
+
+Overwrite uncommited, unstaged changes for a single file. Pulls from the most recent local commit (HEAD). Reverts a single file to the last commited state, **working directory is changed!**
+
+### undo add
+
+    git reset HEAD
+
+Clears the index, i.e. undo 'git add' for all staged changes. Working directory is not changed. 
+
+### undo commit
+
+    git reset --soft HEAD^
+
+Working directory is not changed, this points HEAD to the previous commit. Index is NOT reset, staged changes are still in index. 
+
+### completely start over
+
+    git reset --hard HEAD
+
+Clear all changes since the last commit, reset index, **reset the working directory**, throw out all changes and work, start over from the last commit. 
+
+ 
+Note: if you would like to show the current git repo status in your bash prompt, visit [this page](bash_rc_for_git_func.html) 
+
+
+----------
+
+
 #### Questions?
 
 Please [email me](simon.keng@schrodinger.com) any recommendations or suggestions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
