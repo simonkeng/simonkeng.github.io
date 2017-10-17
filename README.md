@@ -303,7 +303,7 @@ This is a breif outline of the basic git commands used in a trivial case.
 
 ### clone a remote repo
 
-    git clone something
+    git clone https://github.com/something.git
 
 Makes a local copy of the remote repo _somehting_.
 
