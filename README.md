@@ -42,7 +42,7 @@ For more information visit this [stack exchange post](https://unix.stackexchange
 
 ----------
 
-# grep
+# grep, ls, find
 
 List all lines that contain a string matching `foo` in `file.txt`
 
@@ -61,6 +61,13 @@ List all files in the current directory named (or containing) the string `blah`
 Search /path/to/something/ for a file containing "9xyz" in its name.
 
     ls /path/to/something/ | grep 9xyz
+
+
+This is another good one:
+
+    find . -name "*9xyz*"
+
+..will return the path(s) to any files containing `9xyz` in the file name.  
 
 
 ----------
