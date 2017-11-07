@@ -58,12 +58,12 @@ List all files in the current directory named (or containing) the string `blah`
 
     ls | grep blah
 
-Search /path/to/something/ for a file containing "9xyz" in its name.
+Search /path/to/something/ for a file containing `9xyz` in its name.
 
     ls /path/to/something/ | grep 9xyz
 
 
-This is another good one:
+Same as example above except recursive search, and return paths if file name exists. 
 
     find . -name "*9xyz*"
 
