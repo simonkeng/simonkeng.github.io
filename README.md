@@ -2,7 +2,7 @@
 
 # Command Line Jiu Jitsu
 
-Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), adapted for *DDAG data team* users and anyone new to [bash]('https://en.wikipedia.org/wiki/Bash_(Unix_shell)').
+Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), adapted for *DDAG data team* users and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
 
 -----
 
