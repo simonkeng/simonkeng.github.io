@@ -11983,7 +11983,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># find the frequency of each word in list</span>
@@ -12000,7 +12000,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">freq_list</span> <span class="o">=</span> <span class="n">freq</span><span class="p">(</span><span class="n">tokenized</span><span class="p">)</span>
@@ -12013,7 +12013,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">freq_list</span><span class="p">)</span>
@@ -12023,10 +12023,30 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>20247</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">freq_list</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">121</span><span class="p">]</span>
@@ -12036,10 +12056,50 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(u&#39;by&#39;, 118),
+ (u&#39;william&#39;, 4),
+ (u&#39;shakespeare&#39;, 9),
+ (u&#39;from&#39;, 97),
+ (u&#39;fairest&#39;, 5),
+ (u&#39;creatures&#39;, 2),
+ (u&#39;we&#39;, 24),
+ (u&#39;desire&#39;, 11),
+ (u&#39;increase&#39;, 4),
+ (u&#39;that&#39;, 338),
+ (u&#39;thereby&#39;, 2),
+ (u&#39;beauty&#39;, 70),
+ (u&#39;rose&#39;, 6),
+ (u&#39;might&#39;, 26),
+ (u&#39;never&#39;, 16),
+ (u&#39;die&#39;, 12),
+ (u&#39;but&#39;, 168),
+ (u&#39;as&#39;, 132),
+ (u&#39;the&#39;, 613),
+ (u&#39;riper&#39;, 2),
+ (u&#39;should&#39;, 46)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># the above method is okay, but its not sorted.</span>
@@ -12058,6 +12118,45 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(u&#39;the&#39;, 613),
+ (u&#39;and&#39;, 560),
+ (u&#39;to&#39;, 495),
+ (u&#39;of&#39;, 488),
+ (u&#39;in&#39;, 380),
+ (u&#39;my&#39;, 372),
+ (u&#39;that&#39;, 338),
+ (u&#39;thy&#39;, 281),
+ (u&#39;thou&#39;, 235),
+ (u&#39;with&#39;, 228),
+ (u&#39;for&#39;, 198),
+ (u&#39;love&#39;, 195),
+ (u&#39;is&#39;, 194),
+ (u&#39;not&#39;, 188),
+ (u&#39;you&#39;, 183),
+ (u&#39;but&#39;, 168),
+ (u&#39;me&#39;, 164),
+ (u&#39;thee&#39;, 162),
+ (u&#39;be&#39;, 160),
+ (u&#39;or&#39;, 157)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12069,7 +12168,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Word2Vec</span><span class="p">([</span><span class="n">tokenized</span><span class="p">],</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -12082,7 +12181,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s1">&#39;man&#39;</span><span class="p">,</span> <span class="s1">&#39;woman&#39;</span><span class="p">)</span>
@@ -12092,10 +12191,30 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.99754001960964001</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s1">&#39;woman&#39;</span><span class="p">,</span> <span class="s1">&#39;woman&#39;</span><span class="p">)</span>
@@ -12105,10 +12224,30 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.99999999999999989</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">model</span><span class="p">[</span><span class="s1">&#39;woman&#39;</span><span class="p">]</span>
@@ -12118,10 +12257,49 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.08202583,  0.0824983 , -0.02512474,  0.10419195, -0.07338882,
+        0.0139989 , -0.04520747, -0.08931259, -0.00980864,  0.08530603,
+        0.02788235, -0.09535816, -0.04542717,  0.03349644, -0.0123863 ,
+        0.10691798,  0.04491619, -0.05606038,  0.01234527, -0.02241415,
+       -0.13179505, -0.06530344,  0.06341996,  0.14719738, -0.01375049,
+        0.02527826, -0.05636869,  0.10421619, -0.06053819, -0.08885699,
+       -0.01531487,  0.1431126 ,  0.06862741, -0.00553441,  0.02370683,
+        0.05022854,  0.00748868,  0.01143656, -0.00389735, -0.07261071,
+       -0.03773026,  0.04934052, -0.07664131, -0.0411126 ,  0.00539695,
+       -0.0596255 ,  0.03303362,  0.01071489, -0.03568818,  0.03480463,
+        0.00367257, -0.00189138, -0.027572  , -0.03023884, -0.0280238 ,
+        0.00030319, -0.00260339, -0.030462  , -0.13635485,  0.02629017,
+       -0.06364894,  0.04515765, -0.02659768, -0.03539969, -0.01832859,
+        0.00489723, -0.08884388,  0.05692488,  0.08720477,  0.00893202,
+       -0.04438996, -0.0401402 , -0.04898106,  0.02646905, -0.1108785 ,
+       -0.05100903, -0.06045908,  0.07902717, -0.0161067 , -0.00328433,
+       -0.02594371,  0.07714844,  0.01347714, -0.02698018,  0.00047195,
+        0.0966561 ,  0.00045146, -0.08884953,  0.04051106,  0.05760375,
+       -0.04164189,  0.02208702, -0.0073052 , -0.01041839, -0.00960741,
+       -0.03186337,  0.05618915, -0.01351432,  0.0080917 , -0.01386721], dtype=float32)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">vec1</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="s1">&#39;woman&#39;</span><span class="p">]</span>
@@ -12134,7 +12312,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">similar_by_vector</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
@@ -12144,10 +12322,44 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(u&#39;woman&#39;, 1.0000001192092896),
+ (u&#39;she&#39;, 0.9988530278205872),
+ (u&#39;might&#39;, 0.9988079071044922),
+ (u&#39;of&#39;, 0.9987846612930298),
+ (u&#39;hate&#39;, 0.9987770318984985),
+ (u&#39;still&#39;, 0.9987694025039673),
+ (u&#39;upon&#39;, 0.9987680912017822),
+ (u&#39;it&#39;, 0.9987677931785583),
+ (u&#39;when&#39;, 0.998759388923645),
+ (u&#39;should&#39;, 0.9987472295761108),
+ (u&#39;you&#39;, 0.9987443685531616),
+ (u&#39;thee&#39;, 0.9987438321113586),
+ (u&#39;her&#39;, 0.998740553855896),
+ (u&#39;fair&#39;, 0.9987391233444214),
+ (u&#39;every&#39;, 0.9987378120422363)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="s1">&#39;men&#39;</span><span class="p">]</span>
@@ -12158,10 +12370,44 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(u&#39;men&#39;, 1.0),
+ (u&#39;thou&#39;, 0.9996335506439209),
+ (u&#39;their&#39;, 0.999630331993103),
+ (u&#39;at&#39;, 0.9996273517608643),
+ (u&#39;as&#39;, 0.9996235966682434),
+ (u&#39;and&#39;, 0.9996190071105957),
+ (u&#39;of&#39;, 0.9996188282966614),
+ (u&#39;world&#39;, 0.9996161460876465),
+ (u&#39;my&#39;, 0.9996157884597778),
+ (u&#39;his&#39;, 0.999614953994751),
+ (u&#39;where&#39;, 0.9996145963668823),
+ (u&#39;with&#39;, 0.9996132850646973),
+ (u&#39;by&#39;, 0.9996117949485779),
+ (u&#39;heart&#39;, 0.9996115565299988),
+ (u&#39;me&#39;, 0.999609112739563)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="s1">&#39;women&#39;</span><span class="p">]</span>
@@ -12172,10 +12418,44 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(u&#39;women&#39;, 1.0),
+ (u&#39;gift&#39;, 0.9818852543830872),
+ (u&#39;fire&#39;, 0.9817575812339783),
+ (u&#39;mistress&#39;, 0.9816043376922607),
+ (u&#39;smell&#39;, 0.9815888404846191),
+ (u&#39;cheeks&#39;, 0.9814128279685974),
+ (u&#39;youth&#39;, 0.9812649488449097),
+ (u&#39;worse&#39;, 0.9809892177581787),
+ (u&#39;vile&#39;, 0.9809786677360535),
+ (u&#39;told&#39;, 0.9809551239013672),
+ (u&#39;must&#39;, 0.9809184074401855),
+ (u&#39;could&#39;, 0.9808851480484009),
+ (u&#39;put&#39;, 0.9808494448661804),
+ (u&#39;absence&#39;, 0.9808334112167358),
+ (u&#39;away&#39;, 0.980821430683136)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="s1">&#39;love&#39;</span><span class="p">]</span>
@@ -12183,6 +12463,45 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(u&#39;love&#39;, 1.0),
+ (u&#39;and&#39;, 0.999951183795929),
+ (u&#39;my&#39;, 0.9999462366104126),
+ (u&#39;in&#39;, 0.9999434947967529),
+ (u&#39;so&#39;, 0.9999430179595947),
+ (u&#39;thou&#39;, 0.9999426603317261),
+ (u&#39;of&#39;, 0.9999403357505798),
+ (u&#39;thy&#39;, 0.9999395608901978),
+ (u&#39;that&#39;, 0.9999392032623291),
+ (u&#39;to&#39;, 0.9999375343322754),
+ (u&#39;doth&#39;, 0.9999368190765381),
+ (u&#39;the&#39;, 0.9999354481697083),
+ (u&#39;me&#39;, 0.9999353885650635),
+ (u&#39;is&#39;, 0.9999339580535889),
+ (u&#39;have&#39;, 0.9999337196350098),
+ (u&#39;with&#39;, 0.9999337196350098),
+ (u&#39;no&#39;, 0.9999331831932068),
+ (u&#39;their&#39;, 0.9999323487281799),
+ (u&#39;do&#39;, 0.9999316334724426),
+ (u&#39;which&#39;, 0.999929666519165)]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 

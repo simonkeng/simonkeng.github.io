@@ -390,14 +390,14 @@ Note: if you would like to show the current git repo status in your bash prompt,
 
 #### Questions?
 
-Please [email me](simon.keng@schrodinger.com) any recommendations or suggestions.
+Please email <simon.keng@schrodinger.com> for any suggestions or questions.
 
 
 ---------
 
-### WIP Blog Materials:
+### Blog Materials:
 
-1. [Word2Vec in 6 lines of Python](word2vec-in-6-lines.html)
+- [NLP in 6 lines of Python](word2vec-in-6-lines.html)
 
 
 ---------
