@@ -394,6 +394,7 @@ Please [email me](simon.keng@schrodinger.com) any recommendations or suggestions
 
 
 [link to Jupyter Notebook](word2vec-in-6-lines.ipynb)
+[link to Jupyter Notebook](word2vec-in-6-lines.html)
 
 
 
