@@ -393,11 +393,14 @@ Note: if you would like to show the current git repo status in your bash prompt,
 Please [email me](simon.keng@schrodinger.com) any recommendations or suggestions.
 
 
-[link to Jupyter Notebook](word2vec-in-6-lines.ipynb)
-[link to Jupyter Notebook](word2vec-in-6-lines.html)
+---------
+
+### WIP Blog Materials:
+
+1. [Word2Vec in 6 lines of Python](word2vec-in-6-lines.html)
 
 
-
+---------
 
 
 
