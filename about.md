@@ -1,3 +1,3 @@
 # About me
 
-I love computers and data science.
+jfkld sjfsd fjklds jfldsa jklk ajfklsd fjkdksa jklfa i'm cool sometimes. I love music. I really love computers, programming, python, jupyter, and deep learning.
