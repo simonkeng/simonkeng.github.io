@@ -4,7 +4,7 @@ Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Comman
 
 # Ag
 
-Use `ag` to recursively search for `pattern` in `path`, similiar to grep or ack, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher).
+Use `ag` to recursively search for `pattern` in `path`, similiar to grep or awk, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher).
 
 ### install
 
