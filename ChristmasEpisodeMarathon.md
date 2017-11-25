@@ -1,12 +1,12 @@
-# Simon & Megan's Christmas Episode Marathon
+# Simon & Megan's Christmas Episode Marathon List
+
+
+A list of all the Christmas episodes from my favorite Netflix shows. Perfect for a festive weekend of binge watching Netflix.
+
 
 11-24-2017
 
 ------
-
-## **Its Always Sunny**
-
-- season 6 a very sunny christmas
 
 
 ## **The Office**
@@ -31,6 +31,11 @@
 - season 12, episode 8, Christmas Guy
 - season 15, episode 9, How the Griffin Stole Christmas
 - season 16, episode 9, Don't be a Dickens at Christmas
+
+
+## **Its Always Sunny**
+
+- season 6, A Very Sunny Christmas
 
 
 ## **Arrested Development**
