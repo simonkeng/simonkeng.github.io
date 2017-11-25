@@ -394,6 +394,7 @@ Please email <simon.keng@schrodinger.com> for any suggestions or questions.
 ### Blog Materials:
 
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
+- [List Of Christmas Episodes From All My Favorite Shows](ChristmasEpisodeMarathon.md)
 
 
 ---------
