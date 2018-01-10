@@ -1,14 +1,10 @@
-
-
-# Command Line Jiu Jitsu
-
-Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), adapted for *DDAG data team* users and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
+Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), tailored for *DDG data team* users and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
 
 -----
 
 # Ag
 
-Use `ag` to recursively search for `pattern` in `path`, similiar to grep or ack, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher).
+Use `ag` to recursively search for `pattern` in `path`, similiar to grep or awk, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher).
 
 ### install
 
@@ -63,11 +59,11 @@ Search /path/to/something/ for a file containing `9xyz` in its name.
     ls /path/to/something/ | grep 9xyz
 
 
-Same as example above except recursive search, and return paths if file name exists. 
+Same as example above except recursive search, and return paths if file name exists.
 
     find . -name "*9xyz*"
 
-..will return the path(s) to any files containing `9xyz` in the file name.  
+..will return the path(s) to any files containing `9xyz` in the file name.
 
 
 ----------
@@ -307,7 +303,7 @@ extract "foo.zip"
 
 # git
 
-This is a breif outline of the basic git commands used in a trivial case. 
+This is a breif outline of the basic git commands used in a trivial case.
 
 ### clone a remote repo
 
@@ -319,7 +315,7 @@ Makes a local copy of the remote repo _somehting_.
 
     git checkout -b my_branch
 
-Makes a new branch in your local cloned repo, and swiches from master branch to your newly created branch. 
+Makes a new branch in your local cloned repo, and swiches from master branch to your newly created branch.
 
 ### list branches
 
@@ -331,7 +327,7 @@ List the local branches, and notes the current branch you are in. To list local 
 
     git push origin my_branch
 
-Pushes the new branch to the remote repo, other users can now access your branch, but only if your report repo is accessible to them. 
+Pushes the new branch to the remote repo, other users can now access your branch, but only if your report repo is accessible to them.
 
 ### switch to another branch
 
@@ -349,13 +345,13 @@ If you want to merge changes from master with your local changes in your branch,
 
     git merge master
 
-..and merge with master, which pulls commits from master into the active local branch, my_branch. 
+..and merge with master, which pulls commits from master into the active local branch, my_branch.
 
 ### view git logs
 
     git log
 
-Will display the record of commits. 
+Will display the record of commits.
 
 ### undo local changes
 
@@ -367,37 +363,37 @@ Overwrite uncommited, unstaged changes for a single file. Pulls from the most re
 
     git reset HEAD
 
-Clears the index, i.e. undo 'git add' for all staged changes. Working directory is not changed. 
+Clears the index, i.e. undo 'git add' for all staged changes. Working directory is not changed.
 
 ### undo commit
 
     git reset --soft HEAD^
 
-Working directory is not changed, this points HEAD to the previous commit. Index is NOT reset, staged changes are still in index. 
+Working directory is not changed, this points HEAD to the previous commit. Index is NOT reset, staged changes are still in index.
 
 ### completely start over
 
     git reset --hard HEAD
 
-Clear all changes since the last commit, reset index, **reset the working directory**, throw out all changes and work, start over from the last commit. 
+Clear all changes since the last commit, reset index, **reset the working directory**, throw out all changes and work, start over from the last commit.
 
- 
-Note: if you would like to show the current git repo status in your bash prompt, visit [this page](bash_rc_for_git_func.html) 
+
+Note: if you would like to show the current git repo status in your bash prompt, visit [this page](bash_rc_for_git_func.html)
 
 
 ----------
 
 
-#### Questions?
+### Contact
 
-Please email <simon.keng@schrodinger.com> for any suggestions or questions.
-
+<simondkeng@gmail.com>
 
 ---------
 
-### Blog Materials:
+## Random Things:
 
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
+- [List Of Christmas Episodes From All My Favorite Shows](ChristmasEpisodeMarathon.md)
 
 
 ---------
