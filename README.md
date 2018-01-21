@@ -388,6 +388,9 @@ Note: if you would like to show the current git repo status in your bash prompt,
 
 <simondkeng@gmail.com>
 
+- [LinkedIn](https://www.linkedin.com/in/simonkeng/)
+- [GitHub](https://github.com/simonkeng)
+
 ---------
 
 ## Random Things:
