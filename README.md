@@ -396,7 +396,7 @@ Note: if you would like to show the current git repo status in your bash prompt,
 ## Random Things:
 
 <!-- - [NLP in 6 lines of Python](word2vec-in-6-lines.html) -->
-- [Canvas Experiments](ameebo.html)
+- [Canvas Experiments](ameebo.html) and the [code](show_canvas_code.md)
 - [List Of Christmas Episodes From All My Favorite Shows](ChristmasEpisodeMarathon.md)
 
 
