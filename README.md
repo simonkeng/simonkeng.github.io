@@ -394,7 +394,7 @@ Note: if you would like to show the current git repo status in your bash prompt,
 
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
 - [List Of Christmas Episodes From All My Favorite Shows](ChristmasEpisodeMarathon.md)
-- [Canvas Experiments](index.html)
+- [Canvas Experiments](ameebo.html)
 
 
 ---------
