@@ -1,10 +1,8 @@
-# Simon & Megan's Christmas Episode Marathon List
+# Christmas Episode Marathon
 
+A list of all the Christmas episodes, in order per series, from my favorite Netflix shows.
 
-A list of all the Christmas episodes from my favorite Netflix shows. Perfect for a festive weekend of binge watching Netflix.
-
-
-11-24-2017
+_Relevant to Netflix content as of 11-24-2017._
 
 ------
 
@@ -49,4 +47,3 @@ A list of all the Christmas episodes from my favorite Netflix shows. Perfect for
 - season 1, episode 9, The 23rd
 - season 2, episode 11, Santa
 - season 6, episode 10, Christmas Eve Eve
-
