@@ -1,4 +1,6 @@
-Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), tailored for *DDG data team* users and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
+# Command Line Helper
+
+Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), tailored to *data scientists* needs and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), [git](https://en.wikipedia.org/wiki/Git), or [vim](http://www.vim.org/).
 
 -----
 
