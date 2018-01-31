@@ -11781,15 +11781,15 @@ div#notebook {
 <h1 id="Word2Vec-in-6-lines-of-Python">Word2Vec in 6 lines of Python<a class="anchor-link" href="#Word2Vec-in-6-lines-of-Python">&#194;&#182;</a></h1><ul>
 <li>6 lines, not including the analysis</li>
 <li>Using <a href="http://www.gutenberg.org/wiki/Main_Page">project gutenberg</a> to obtain data. </li>
-<li><p><a href="http://www.gutenberg.org/ebooks/1041">Input data used in this walkthrough</a></p>
-<p>1  import requests
-  2  import gensim
-  3  url = '<a href="http://www.gutenberg.org/cache/epub/1041/pg1041.txt">http://www.gutenberg.org/cache/epub/1041/pg1041.txt</a>'
-  4  text = requests.get(url).text
-  5  tokens = gensim.utils.simple_preprocess(text)
-  6  model = gensim.models.Word2Vec([tokens], min_count=3, size=100)</p>
-</li>
+<li><a href="http://www.gutenberg.org/ebooks/1041">Input data used in this walkthrough</a> </li>
 </ul>
+
+<pre><code>    1  import requests
+    2  import gensim
+    3  url = 'http://www.gutenberg.org/cache/epub/1041/pg1041.txt'
+    4  text = requests.get(url).text
+    5  tokens = gensim.utils.simple_preprocess(text)
+    6  model = gensim.models.Word2Vec([tokens], min_count=3, size=100)</code></pre>
 <hr>
 <h2 id="Breakdown-of-this-code">Breakdown of this code<a class="anchor-link" href="#Breakdown-of-this-code">&#194;&#182;</a></h2>
 </div>
