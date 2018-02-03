@@ -382,9 +382,7 @@ Clear all changes since the last commit, reset index, **reset the working direct
 
 Note: if you would like to show the current git repo status in your bash prompt, visit [this page](bash_rc_for_git_func.html)
 
-
 ----------
-
 
 ### Contact
 
@@ -395,11 +393,12 @@ Note: if you would like to show the current git repo status in your bash prompt,
 
 ---------
 
-## Random Things:
+## Random Stuff:
 
-- [Canvas Experiments](ameebo.html) and the [code](show_canvas_code.md)
+- [canvas experiment 1](ameebo.html) and the [code](show_canvas_code.md)
+- [canvas experiment 2](canvas_stuff/exp.html)
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
-- [List Of Christmas Episodes From All My Favorite Shows](ChristmasEpisodeMarathon.md)
+- [List Of Christmas Episodes From All My FavoriteShows](ChristmasEpisodeMarathon.md)
 
 
 ---------

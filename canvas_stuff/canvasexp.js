@@ -7,8 +7,8 @@ var aud = document.querySelector('audio');
 
 // get canvas to take up the
 // full width and height of browser window
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
 
@@ -26,13 +26,16 @@ var mouse = {
 }
 
 var maxRadius = 70;
-var minRadius = 4;
+// var minRadius = 4;
 
 var colorArray = [
-    '#ECFEFF',
+    // '#ECFEFF',
     // '#00B7C2',
-    '#128494',
-    '#4EF037',
+    // // '#128494',
+    // '#4EF037',
+    '#F2F4F7',
+    '#E43A19',
+    '#020205'
 ];
 
 //////////////////////////// EVENT LISTENER FOR MOUSE MOVEMENT
@@ -42,7 +45,12 @@ window.addEventListener('mousemove', function(event) {
     // console.log(mouse);
 })
 
+window.addEventListener('resize', function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
+    init();
+})
 
 ///////////////////////////// CREATE CIRCLE OBJECT
 
@@ -52,6 +60,7 @@ function Circle(x, y, dx, dy, radius) {
     this.dx = dx;
     this.dy = dy;
     this.radius = radius;
+    this.minRadius = radius;
     this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
     this.draw = function() {
@@ -81,7 +90,7 @@ function Circle(x, y, dx, dy, radius) {
             if (this.radius < maxRadius) {
                 this.radius += 1;
             }
-        } else if (this.radius > minRadius){
+        } else if (this.radius > this.minRadius){
             this.radius -= 1;
         }
 
@@ -90,21 +99,20 @@ function Circle(x, y, dx, dy, radius) {
     }
 }
 
-
-//////////////////////// GENERATE ALL THE CIRCLES
-
 var circleArray = [];
 
-for (var i = 0; i < 400; i++) {
-    var radius = 20;
-    var x = Math.random() * (innerWidth - radius * 2) + radius;
-    var y = Math.random() * (innerHeight - radius * 2) + radius;
-    var dx = (Math.random() - 0.5) * 2;
-    var dy = (Math.random() - 0.5) * 2;
-    circleArray.push(new Circle(x, y, dx, dy, radius));
-
+function init() {
+    circleArray = [];
+    //////////////////////// GENERATE ALL THE CIRCLES
+    for (var i = 0; i < 800; i++) {
+        var radius = Math.random() * 3 + 1;
+        var x = Math.random() * (innerWidth - radius * 2) + radius;
+        var y = Math.random() * (innerHeight - radius * 2) + radius;
+        var dx = (Math.random() - 0.5) * 2;
+        var dy = (Math.random() - 0.5) * 2;
+        circleArray.push(new Circle(x, y, dx, dy, radius));
+    }
 }
-
 
 ///////////////////// MAKE IT ALL HAPPEN ON SCREEN
 
@@ -116,4 +124,6 @@ function animate() {
     }
 
 }
+
+init();
 animate();
