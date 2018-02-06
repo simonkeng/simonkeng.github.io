@@ -25,18 +25,13 @@ var mouse = {
     y: undefined
 }
 
-var maxRadius = 70;
-// var minRadius = 4;
+var maxRadius = 100;
 
-var colorArray = [
-    // '#ECFEFF',
-    // '#00B7C2',
-    // // '#128494',
-    // '#4EF037',
-    '#F2F4F7',
-    '#E43A19',
-    '#020205'
-];
+var colorArray1 = ['#F2F4F7', '#E43A19', '#020205'];
+var colorArray2 = ['#17283B', '#F2E3CF', '#BE8E57', '#0E1E33'];
+var colorArray3 = ['#239D60', '#A3DE83', '#F7F39A'];
+var colorArray4 = ['#FFFFFF', '#F95F62', 'DC304B', '#1F2D3D'];
+
 
 //////////////////////////// EVENT LISTENER FOR MOUSE MOVEMENT
 window.addEventListener('mousemove', function(event) {
@@ -61,7 +56,7 @@ function Circle(x, y, dx, dy, radius) {
     this.dy = dy;
     this.radius = radius;
     this.minRadius = radius;
-    this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
+    this.color = colorArray2[Math.floor(Math.random() * colorArray2.length)];
 
     this.draw = function() {
         c.beginPath();
@@ -104,12 +99,12 @@ var circleArray = [];
 function init() {
     circleArray = [];
     //////////////////////// GENERATE ALL THE CIRCLES
-    for (var i = 0; i < 800; i++) {
+    for (var i = 0; i < 900; i++) {
         var radius = Math.random() * 3 + 1;
         var x = Math.random() * (innerWidth - radius * 2) + radius;
         var y = Math.random() * (innerHeight - radius * 2) + radius;
         var dx = (Math.random() - 0.5) * 2;
-        var dy = (Math.random() - 0.5) * 2;
+        var dy = (Math.random() - 0.5) * 1;
         circleArray.push(new Circle(x, y, dx, dy, radius));
     }
 }
