@@ -30,7 +30,7 @@ var maxRadius = 100;
 var colorArray1 = ['#F2F4F7', '#E43A19', '#020205'];
 var colorArray2 = ['#17283B', '#F2E3CF', '#BE8E57', '#0E1E33'];
 var colorArray3 = ['#239D60', '#A3DE83', '#F7F39A'];
-var colorArray4 = ['#FFFFFF', '#F95F62', 'DC304B', '#1F2D3D'];
+var colorArray4 = ['#FFFFFF', '#F95F62', '#DC304B', '#1F2D3D'];
 
 
 //////////////////////////// EVENT LISTENER FOR MOUSE MOVEMENT
