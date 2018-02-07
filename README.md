@@ -398,7 +398,7 @@ Note: if you would like to show the current git repo status in your bash prompt,
 - [canvas experiment 1](ameebo.html) and the [code](show_canvas_code.md)
 - [canvas experiment 2](canvas_stuff/exp.html)
 - [canvas experiment 3](canvas_stuff/expthree.html)
-<!-- - [canvas experiment 4](canvas_stuff/exptwo.html) Currently broken-->
+- [canvas experiment 4](canvas_stuff/exptwo.html)
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
 - [List Of Christmas Episodes From All My FavoriteShows](ChristmasEpisodeMarathon.md)
 
