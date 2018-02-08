@@ -25,7 +25,7 @@ var mouse = {
     y: undefined
 }
 
-var maxRadius = 700;
+var maxRadius = 1000;
 
 var colorArray1 = ['#F2F4F7', '#E43A19', '#020205'];
 var colorArray2 = ['#17283B', '#F2E3CF', '#BE8E57', '#0E1E33'];
@@ -101,12 +101,12 @@ var circleArray = [];
 function init() {
     circleArray = [];
     //////////////////////// GENERATE ALL THE CIRCLES
-    for (var i = 0; i < 120; i++) {
+    for (var i = 0; i < 300; i++) {
         var radius = Math.random() * 11 + 3;
         var x = Math.random() * (innerWidth - radius * 2) + radius;
         var y = Math.random() * (innerHeight - radius * 2) + radius;
-        var dx = (Math.random() - 0.5) * 6;
-        var dy = (Math.random() - 0.5) * 6;
+        var dx = (Math.random() - 0.5) * 5;
+        var dy = (Math.random() - 0.5) * 5;
         circleArray.push(new Circle(x, y, dx, dy, radius));
     }
 }
