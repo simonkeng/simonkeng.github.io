@@ -2,7 +2,7 @@
 
 ### What is this?
 
-Countless mind-boggling canvas animations on [codepen](https://codepen.io/) inspired this work. I learned everything from [this series](https://youtu.be/EO6OkltgudE) of videos by [Chris Courses](https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA). I highly recommend starting with his videos, especially if you are new to JavaScript.
+Countless mind-boggling canvas animations on [codepen](https://codepen.io/) inspired these canvas projects. I learned everything from [this series](https://youtu.be/EO6OkltgudE) of videos by [Chris Courses](https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA). I highly recommend starting with his videos, especially if you are new to JavaScript. 
 
 
 ## ameebo.html

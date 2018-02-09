@@ -395,10 +395,12 @@ Note: if you would like to show the current git repo status in your bash prompt,
 
 ## Random Stuff:
 
-- [canvas experiment 1](ameebo.html) and the [code](show_canvas_code.md)
-- [canvas experiment 2](canvas_stuff/exp.html)
-- [canvas experiment 3](canvas_stuff/expthree.html)
-- [canvas experiment 4](canvas_stuff/exptwo.html)
+_Note: for the canvas experiments, you'll probably need to resize your browser window after clicking the link. Not sure how to fix it yet._
+
+- [Canvas experiment 1](ameebo.html) and the [code](show_canvas_code.md)
+- [Canvas experiment 2](canvas_stuff/exp.html)
+- [Canvas experiment 3](canvas_stuff/expthree.html)
+- [Canvas experiment 4](canvas_stuff/exptwo.html)
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
 - [List Of Christmas Episodes From All My FavoriteShows](ChristmasEpisodeMarathon.md)
 

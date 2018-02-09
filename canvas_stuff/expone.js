@@ -18,6 +18,16 @@ function clickAlert() {
     alert("Your mouse feeds the circles. Follow them to feed them. Move away from them and they shrink. Keeping your mouse at the center of a circle will feed it. Only the center. Eventually a circle will become so large that you might want the original background back. Try moving your mouse to a random place in the browser window and leave it there for a few moments. The enormous circle(s) will shrink back to their original sizes. If this doesnt work, just resize the window.");
 }
 
+// function flipSwitch() {
+//     var x = document.getElementById("fml");
+//     var text = "";
+//     var i;
+//     for (i = 0; i < x.length; i++) {
+//         text += x.elements[i].value;
+//     }
+//     document.getElementById("tots").innerHTML = text;
+// }
+
 // start mitis song when you land on page
 // aud.play();
 // turn this back on soon ^
@@ -102,8 +112,8 @@ var circleArray = [];
 function init() {
     circleArray = [];
     //////////////////////// GENERATE ALL THE CIRCLES
-    for (var i = 0; i < 70; i++) {
-        var radius = Math.random() * 24 + 1;
+    for (var i = 0; i < 500; i++) {
+        var radius = Math.random() * 7 + 1;
         var x = Math.random() * (innerWidth - radius * 2) + radius;
         var y = Math.random() * (innerHeight - radius * 2) + radius;
         var dx = (Math.random() - 0.5) * 3;
