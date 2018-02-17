@@ -274,7 +274,7 @@ For more information on vim and vi commands, usage, and to understand the vi lan
 ### color
 
     $ cd ~
-    $ echo "syntax on" > .vimrc
+    $ echo "syntax on" >> .vimrc
 
 You can even choose your own [color scheme](http://alvinalexander.com/linux/vi-vim-editor-color-scheme-colorscheme).
 
