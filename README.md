@@ -194,7 +194,7 @@ Generate a password using openSSL
 Use alias for making a password generator
 
     $ cd ~
-    $ echo "alias pgen='openssl rand -base64 48 | cut -c1-${1}'" > .bash_profile
+    $ echo "alias pgen='openssl rand -base64 48 | cut -c1-${1}'" >> .bash_profile
 
 in a new terminal
 
@@ -208,39 +208,50 @@ in a new terminal
 
 The following simplified list of commands are for getting up and running fast, for more thorough vi cheat sheets see the links [here](http://www.viemu.com/vi-vim-cheat-sheet.gif) and [here](http://www.fprintf.net/vimCheatSheet.html).
 
-### running vi or vim
+### running vim or vi
 	$ vim
-
-or
 
 	$ vi
 
-–the editor will open, to enter 'insert mode' type `i` and enter in some text. To save and quit, press `ESC` followed by `:` then enter the letters `w` (for write or save) and `q` (for quit) then press enter.
+–the editor will open in normal mode, to enter 'insert' mode type `i` and enter in some text. To save and quit, press `ESC` followed by `:` then enter the letters `w` (save) and `q` (quit) then press enter.
 
 Note: [difference between vim and vi?](https://askubuntu.com/questions/418396/what-is-the-difference-between-vi-and-vim)
 
-### navigation
+## navigation
+
+### char nav
 
 `h` move cursor left
 
 `l` move cursor right
 
-`k` up
+`k` move up
 
-`j` down
+`j` move down
+
+### word nav
+
+`w` moves to the start of next word
+
+`e` moves to the end of the word
+
+`b` moves to beginning of the word
+
+### document nav
 
 `H` move to top of screen
 
-`L` move to bottom
-
-`$` jump to the end of a line
-
-`O` jump to the start of a line
+`L` move to bottom of screen
 
 `G` jump to the last line of the document
 
 `gg` jump to the first line of the document
 
+### line nav
+
+`0` jump to the start of a line
+
+`$` jump to the end of a line
 
 ### saving
 
