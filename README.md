@@ -67,6 +67,28 @@ Same as example above except recursive search, and return paths if file name exi
 
 ..will return the path(s) to any files containing `9xyz` in the file name.
 
+----------
+
+# touch
+
+Create files. Also update the date that a file was edited.
+
+	$ touch file.txt
+
+You can make multiple at once.
+
+	$ touch code1.py code2.py
+
+----------
+
+# ping
+
+Check if your internet is working. Check if a website is running and the URL is live, or if anything is listening on a machine/server.
+
+	$ ping www.google.com -c 3
+
+The `-c` flag tells it to only ping three times. You can run `ping` without the flag, and watch the pinging happen. To stop it, press ctrl + c.
+
 
 ----------
 
