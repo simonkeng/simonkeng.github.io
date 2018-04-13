@@ -1,6 +1,6 @@
-# Command Line Helper
+# Command Line Jiu Jitsu
 
-Influenced by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), tailored to *data scientists* needs and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), [git](https://en.wikipedia.org/wiki/Git), or [vim](http://www.vim.org/).
+Influenced and inspired by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), tailored to *data scientists* needs and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), [git](https://en.wikipedia.org/wiki/Git), or [vim](http://www.vim.org/).
 
 -----
 
@@ -265,15 +265,31 @@ Note: [difference between vim and vi?](https://askubuntu.com/questions/418396/wh
 
 `L` move to bottom of screen
 
+`gg` jump to the first line of the document
+
 `G` jump to the last line of the document
 
-`gg` jump to the first line of the document
+`<number>G` will jump directly to that line number, so `12G` will jump to line 12 in your code.
 
 ### line nav
 
 `0` jump to the start of a line
 
 `$` jump to the end of a line
+
+### searching
+
+`f` to find the first occurance of a character on the current line. `fa` will jump to the first occurance of 'a' on the current line. 
+
+`%` will jump to the first occurance of parentheses or brackets. 
+
+With `*` you can jump to the next occurance of the word your cursor is over, and `#` for the previous occurance. As an example, if you want to find the word "for" you can type `/for` to jump to the first occurance of "for", then use `*` to cycle through the next occurance and `#` to the previous. For searching with `/` you can use `n` and `N` to cycle through the next and previous occurance, respectively. 
+
+### miscellaneous
+
+`o` to insert a new line below the current line your on, and enter insert mode. 
+
+`O` to insert a new line above the current line your on, and enter insert mode. 
 
 ### saving
 
