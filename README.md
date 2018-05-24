@@ -446,6 +446,7 @@ Note: if you would like to show the current git repo status in your bash prompt,
 
 _Note: for the canvas experiments, you'll probably need to resize your browser window after clicking the link. Not sure how to fix it yet._
 
+- [RDKit + rdkit.Chem + Conda + Jupyter = Docker Solution](https://github.com/simonkeng/rdkit-jupyter-docker)
 - [Canvas experiment 1](ameebo.html) and the [code](show_canvas_code.md)
 - [Canvas experiment 2](canvas_stuff/exp.html)
 - [Canvas experiment 3](canvas_stuff/expthree.html)
