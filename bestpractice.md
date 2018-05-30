@@ -7,7 +7,7 @@ For personal scripts, the minimum requirement is a docstring at the top of the f
 
 ```python
 '''
-Name of script
+Name of script, what it does
 
 Install:
 ...
