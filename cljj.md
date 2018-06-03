@@ -276,7 +276,9 @@ Note: [difference between vim and vi?](https://askubuntu.com/questions/418396/wh
 
 ### line nav
 
-`0` jump to the start of a line
+`0` jump to the start of the current line
+
+`A` append to the end of current line
 
 `$` jump to the end of a line
 
