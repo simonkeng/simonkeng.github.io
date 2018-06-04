@@ -284,7 +284,7 @@ Note: [difference between vim and vi?](https://askubuntu.com/questions/418396/wh
 
 ### searching
 
-`f` to find the first occurance of a character on the current line. `fa` will jump to the first occurance of 'a' on the current line. 
+`/` to search and `n` to go to the next occurance of the search, `N` to go in reverse. Regex can be used in searching. 
 
 `%` will jump to the first occurance of parentheses or brackets. 
 
