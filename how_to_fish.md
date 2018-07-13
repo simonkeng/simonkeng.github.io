@@ -8,16 +8,20 @@ brew install fish
 # 2
 curl -L https://get.oh-my.fish | fish
 
-#3
+# 3
+# make sure you are in the fish shell
+fish
+
+# 4
 omf update
 omf install bobthefish
 
-#4
+# 5
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 
-#5
+# 6
 pip install powerline-status
 
-
+# 7 
 ```
