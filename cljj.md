@@ -159,11 +159,11 @@ If you want to save your pip packages in a file, e.g. `requirements.txt`
 
 First take your patent or article image, and convert it to a TIFF. On macOS, within the Preview application, go to File > Export, in the pop up window choose:
 
-Format: TIFF
+1. Format: TIFF
 
-Compression: None
+2. Compression: None or JPEG
 
-Resolution: 300 pixels/inch
+3. Resolution: 300 pixels/inch
 
 Then from the command line
 
