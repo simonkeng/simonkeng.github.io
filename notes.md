@@ -1,6 +1,0 @@
-# Skills
-
-- GitLab
-- git
-- GitHub
-- 
