@@ -105,8 +105,8 @@ function init() {
         var radius = Math.random() * 11 + 3;
         var x = Math.random() * (innerWidth - radius * 2) + radius;
         var y = Math.random() * (innerHeight - radius * 2) + radius;
-        var dx = (Math.random() - 0.5) * 5;
-        var dy = (Math.random() - 0.5) * 5;
+        var dx = (Math.random() - 0.5) * 9; // movement velocity x
+        var dy = (Math.random() - 0.5) * 9; // movement velocity y
         circleArray.push(new Circle(x, y, dx, dy, radius));
     }
 }
