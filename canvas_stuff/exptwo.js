@@ -7,38 +7,24 @@ var aud = document.querySelector('audio');
 
 // get canvas to take up the
 // full width and height of browser window
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
 
 ///////////////////
 
-function clickAlert() {
-    alert("Your mouse feeds the circles. Follow them to feed them. Move away from them and they shrink. Keeping your mouse at the center of a circle will feed it. Only the center. Eventually a circle will become so large that you might want the original background back. Try moving your mouse to a random place in the browser window and leave it there for a few moments. The enormous circle(s) will shrink back to their original sizes. If this doesnt work, just resize the window.");
-}
-
-// function flipSwitch() {
-//     var x = document.getElementById("fml");
-//     var text = "";
-//     var i;
-//     for (i = 0; i < x.length; i++) {
-//         text += x.elements[i].value;
-//     }
-//     document.getElementById("tots").innerHTML = text;
-// }
-
-// start mitis song when you land on page
-// aud.play();
-// turn this back on soon ^
-
+// global object
 var mouse = {
     x: undefined,
     y: undefined
 }
 
-var maxRadius = 1000;
+// global constants
+const maxRadius = 30;
+const numberOfCircles = 1000;
 
+// colors
 var colorArray1 = ['#F2F4F7', '#E43A19', '#020205'];
 var colorArray2 = ['#17283B', '#F2E3CF', '#BE8E57', '#0E1E33'];
 var colorArray3 = ['#239D60', '#A3DE83', '#F7F39A'];
@@ -46,7 +32,8 @@ var colorArray4 = ['#FFFFFF', '#F95F62', 'DC304B', '#1F2D3D'];
 var colorArray5 = ['#393232', '#4D4545', '#8D6262', '#ED8D8D', '#E7E6E1',
                    '#F7F6E7', '#C1C0B9', '#58DADA'];
 
-//////////////////////////// EVENT LISTENER FOR MOUSE MOVEMENT
+//////// EVENT LISTENER FOR MOUSE MOVEMENT
+
 window.addEventListener('mousemove', function(event) {
     mouse.x = event.x;
     mouse.y = event.y;
@@ -60,7 +47,7 @@ window.addEventListener('resize', function() {
     init();
 })
 
-///////////////////////////// CREATE CIRCLE OBJECT
+////// CREATE CIRCLE OBJECT
 
 function Circle(x, y, dx, dy, radius) {
     this.x = x;
@@ -111,8 +98,8 @@ var circleArray = [];
 
 function init() {
     circleArray = [];
-    //////////////////////// GENERATE ALL THE CIRCLES
-    for (var i = 0; i < 500; i++) {
+/////// GENERATE ALL THE CIRCLES
+    for (var i = 0; i < numberOfCircles; i++) {
         var radius = Math.random() * 7 + 1;
         var x = Math.random() * (innerWidth - radius * 2) + radius;
         var y = Math.random() * (innerHeight - radius * 2) + radius;
@@ -122,7 +109,7 @@ function init() {
     }
 }
 
-///////////////////// MAKE IT ALL HAPPEN ON SCREEN
+/////// MAKE IT ALL HAPPEN ON SCREEN
 
 function animate() {
     requestAnimationFrame(animate);
@@ -132,6 +119,8 @@ function animate() {
     }
 
 }
+
+// main
 
 init();
 animate();
