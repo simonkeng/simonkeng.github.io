@@ -340,6 +340,8 @@ and add the following lines
 
 Find more information [here](http://www.makeuseof.com/tag/5-things-need-put-vim-config-file/).
 
+**Note** If you are looking for a feature-packed, colorful, modern, and professional vim experience, check out my current [oh my vim configuration](https://github.com/simonkeng/dotfiles#vim).
+
 
 ----------
 

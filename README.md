@@ -18,4 +18,13 @@ _Note: for the canvas experiments, you'll probably need to resize your browser w
 
 - [List Of Christmas Episodes From All My FavoriteShows](ChristmasEpisodeMarathon.md)
 
+----------
 
+### Contact
+
+<simondkeng@gmail.com>
+
+- [GitHub](https://github.com/simonkeng)
+- [LinkedIn](https://www.linkedin.com/in/simonkeng/)
+
+----------
