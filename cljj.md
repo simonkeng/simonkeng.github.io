@@ -6,7 +6,7 @@ Influenced and inspired by [Command Line Kung Fu](https://books.google.com/books
 
 # Ag
 
-Use `ag` to recursively search for `pattern` in `path`, similiar to grep or awk, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher).
+Use `ag` to recursively search for `pattern` in `path`, similiar to grep or awk, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher). `ag` searches within directories folder names and within files, sim
 
 ```bash
 ag <pattern> <path>
@@ -21,7 +21,7 @@ Once downloaded, `man ag` will provide all the information you need about using 
 
 	ag ABC1 ~/Users/keng/Projects/
 
-–where `ag` will search for the string `ABC1` in all the files and file names, recursively, down from `Projects/` to the very bottom of the directory tree.
+–where `ag` will search for the string `ABC1` **within** all the files and **file names**, recursively, down from `Projects/` to the very bottom of the directory tree.
 
 
 ----------
@@ -80,7 +80,7 @@ Create files. Also update the date that a file was edited.
 
 You can make multiple at once.
 
-	$ touch code1.py code2.py
+	$ touch index.html index.js index.css
 
 ----------
 
@@ -99,11 +99,13 @@ The `-c` flag tells it to only ping three times. You can run `ping` without the 
 
 If you want to smash several files together, try using `cat`. Here we have three CSVs in our working directory.
 
-	$ ls
-    one.csv
-    two.csv
-    three.csv
-    $ cat *.csv >> all.csv
+```bash
+$ ls
+one.csv
+two.csv
+three.csv
+$ cat *.csv >> all.csv
+```
 
 then to sort the output by unique lines with `sort -u`
 
@@ -146,7 +148,7 @@ If you want to save your pip packages in a file, e.g. `requirements.txt`
 
 
 
-# tesseract OCR
+# tesseract
 
 [Tesseract](https://github.com/tesseract-ocr/tesseract) is an open source optical character recognition (OCR) command line tool that uses the `libtesseract` OCR engine.
 
@@ -284,17 +286,17 @@ Note: [difference between vim and vi?](https://askubuntu.com/questions/418396/wh
 
 ### searching
 
-`/` to search and `n` to go to the next occurance of the search, `N` to go in reverse. Regex can be used in searching. 
+`/` to search and `n` to go to the next occurance of the search, `N` to go in reverse. Regex can be used in searching.
 
-`%` will jump to the first occurance of parentheses or brackets. 
+`%` will jump to the first occurance of parentheses or brackets.
 
-With `*` you can jump to the next occurance of the word your cursor is over, and `#` for the previous occurance. As an example, if you want to find the word "for" you can type `/for` to jump to the first occurance of "for", then use `*` to cycle through the next occurance and `#` to the previous. For searching with `/` you can use `n` and `N` to cycle through the next and previous occurance, respectively. 
+With `*` you can jump to the next occurance of the word your cursor is over, and `#` for the previous occurance. As an example, if you want to find the word "for" you can type `/for` to jump to the first occurance of "for", then use `*` to cycle through the next occurance and `#` to the previous. For searching with `/` you can use `n` and `N` to cycle through the next and previous occurance, respectively.
 
 ### miscellaneous
 
-`o` to insert a new line below the current line your on, and enter insert mode. 
+`o` to insert a new line below the current line your on, and enter insert mode.
 
-`O` to insert a new line above the current line your on, and enter insert mode. 
+`O` to insert a new line above the current line your on, and enter insert mode.
 
 ### saving
 
@@ -339,6 +341,8 @@ and add the following lines
     set showmatch
 
 Find more information [here](http://www.makeuseof.com/tag/5-things-need-put-vim-config-file/).
+
+**Note** If you are looking for a feature-packed, colorful, modern, and professional vim experience, check out my current [oh my vim configuration](https://github.com/simonkeng/dotfiles#vim).
 
 
 ----------
