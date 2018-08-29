@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>A-Frame Experiment</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    
+</head>
+<body>
+    <a-scene stats>
+        <a-assets>
+            <img id="sky" src="equirect.jpg">
+        </a-assets>
+        <a-sky src="#sky"></a-sky>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+
+            <a-cursor></a-cursor>
+
+        </a-entity>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <!-- <a-plane color="blue" rotation="-90 0 0" width="100" height="100"></a-plane>  -->
+    </a-scene>
+
+
+    <script>
+
+    </script>
+
+</body>
+</html>
