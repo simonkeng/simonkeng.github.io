@@ -12,12 +12,7 @@ _Note: for the canvas experiments, you'll probably need to resize your browser w
 - [Canvas experiment 3](canvas_stuff/expthree.html)
 - [Canvas experiment 4](canvas_stuff/exptwo.html)
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
-<<<<<<< HEAD
 - [A-frame experiment](aframe-app.html)
-=======
-- [A-frame experiment](framed.html)
->>>>>>> cf99a23ec0408822564f3343487853613cddacc7
-
 
 ## Random Things
 
