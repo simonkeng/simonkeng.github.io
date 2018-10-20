@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
+    </head>
+
+    <style>
+        html {
+            background: #000000;
+        }
+    
+        h1 {
+            color: #12e6c8;
+            font-family: 'Metal Mania', cursive;
+            font-size: 60;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <h1>
+        Audiomou5e
+    </h1>
+       
+</html>
+
+<script>
+
+var song;
+var playButton;
+var amp;
+
+var jumpButton;
+
+var fft;
+var numBars = 16;
+
+function togglePlaying() {
+    if (!song.isPlaying()) {
+        song.play();
+        song.setVolume(0.5);
+        playButton.html("pause");
+    } else {
+        song.stop();
+        playButton.html("play");
+    }
+}
+
+function jumpFunc() {
+    song.jump(80);
+
+}
+
+function loaded() {
+    playButton = createButton("play");
+    playButton.mousePressed(togglePlaying);
+    jumpButton = createButton("jump");
+    jumpButton.mousePressed(jumpFunc);
+}
+
+// ==================== SETUP ====================
+
+function setup() {
+    createCanvas(1500, 600);
+    song = loadSound("music/getter.mp3", loaded);
+    amp = new p5.Amplitude();
+
+}
+
+// ===================== DRAW =====================
+
+function draw() {
+
+    background('#000000');
+
+    if (typeof song != "undefined"
+        && song.isLoaded()
+        && !song.isPlaying()) {
+
+        fft = new p5.FFT();
+        fft.waveform(numBars);
+        fft.smooth(0.85);
+
+    }
+
+    if (typeof fft != "undefined") {
+        var spectrum = fft.analyze();
+        noStroke();
+        for (var i = 0; i < numBars; i++) {
+
+            // *** ============= Calculations ============= ***
+            var h = -height + map(spectrum[i], 0, 255, height, 0) - 20;
+            var vol = amp.getLevel();
+            var diam_large = map(vol, 0, 0.4, 0, 600);
+            var diam_mid = map(vol, 0, 0.8, 0, 500);
+            var diam_small = map(vol, 0, 0.3, 0, 40);
+
+
+            // ======== The S
+            noStroke();
+            fill('#a287f4');
+            ellipse((width / 2) + h + diam_large, (height / 2) + h + 60, diam_large, diam_large);
+
+            fill('#12e6c8');
+            ellipse((width / 2) - h - diam_large, (height / 2) - h - 60, diam_large, diam_large);
+            // ========
+
+            // ======== Small Dots Horizontal
+            fill('#a287f4');
+            ellipse((width/2)+h, (height/2), diam_small, diam_small);
+            fill('#12e6c8');
+            ellipse((width/2)-h, (height/2), diam_small, diam_small);
+            // ========
+
+            // ======== Small Dots Bouncing
+            fill('#a287f4');
+            ellipse((width/2)+h, (height/2) + diam_large, diam_small, diam_small);
+            fill('#12e6c8');
+            ellipse((width/2)-h, (height/2) + diam_large, diam_small, diam_small);
+
+            fill('#a287f4');
+            ellipse((width/2) + diam_large, (height/2)-h, diam_small, diam_small);
+            
+            fill('#12e6c8');
+            ellipse((width/2) + diam_large + 900, (height/2)+h, diam_small, diam_small);
+            fill('#12e6c8');
+            ellipse((height/2) + diam_large, (height/2)-h, diam_small, diam_small);
+            // ========
+        
+
+        }
+    }
+// end draw
+}
+
+</script>
+
+
+</html>
+
+
+
