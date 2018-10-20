@@ -1,0 +1,176 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
+    </head>
+
+    <style>
+        html {
+            background: #000000;
+        }
+    
+        h1 {
+            color: #12e6c8;
+            font-family: 'Metal Mania', cursive;
+            font-size: 60;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #12e6c8;
+            font-family: 'Metal Mania', cursive;
+            font-size: 30;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        a {
+            color: #a287f4;
+            text-decoration: none;
+            margin: 10px;
+        }
+        a:hover {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        #bottom {
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            bottom: 5px;
+            text-align: center;
+        }
+        .demo {
+            color: #414141;
+            
+        }
+    </style>
+
+    <h1>
+        Audiomou5e
+    </h1>
+    <p>
+        <a href="https://www.github.com/simonkeng">github</a>
+        <a href="https://www.linkedin.com/in/simonkeng">linkedin</a>
+        <a href="https://www.twitter.com/simon_keng">twitter</a>
+        <br>
+        <a href="s_demo.html" class="demo">s</a>
+        <a href="mouse_rex_demo.html" class="demo">mau5</a>
+        <a href="kp_demo.html" class="demo">kp</a>
+    </p>
+    
+    <p id="bottom">
+        BSD-3 Copyright (c) 2018, Simon Keng. All rights reserved.
+    </p>
+
+</html>
+
+<script>
+
+var song;
+var button;
+var amp;
+
+var fft;
+var numBars = 16;
+
+function togglePlaying() {
+    if (!song.isPlaying()) {
+        song.play();
+        song.setVolume(0.5);
+        button.html("play");
+    } else {
+        song.stop();
+        button.html("pause");
+    }
+}
+
+function loaded() {
+    button = createButton("play");
+    button.mousePressed(togglePlaying);
+    jumpButton = createButton("jump");
+    jumpButton.mousePressed(jumpFunc);
+}
+
+function jumpFunc() {
+    song.jump(35); // rex
+
+}
+
+// ==================== SETUP ====================
+
+function setup() {
+    createCanvas(1500, 600);
+    song = loadSound("rex.mp3", loaded);
+    amp = new p5.Amplitude();
+
+}
+
+// ===================== DRAW =====================
+
+function draw() {
+
+    background('#000000');
+
+    if (typeof song != "undefined"
+        && song.isLoaded()
+        && !song.isPlaying()) {
+
+        fft = new p5.FFT();
+        fft.waveform(numBars);
+        fft.smooth(0.85);
+
+    }
+
+    if (typeof fft != "undefined") {
+        var spectrum = fft.analyze();
+        noStroke();
+        for (var i = 0; i < numBars; i++) {
+
+            // *** ============= Calculations ============= ***
+            var x = map(i, 0, numBars, 0, width);
+            var h = -height + map(spectrum[i], 0, 255, height, 0) - 16;
+            var vol = amp.getLevel();
+            var diam2 = map(vol, 0, 0.5, 0, 800);
+            var diam_small = map(vol, 0, 0.3, 0, 20);
+            var diam_mid = map(vol, 0, 0.3, 0, 100);
+
+            // ======== FFT
+            fill('#474a56');
+            ellipse(x, height, (width/2), h + 10);
+            // ========
+            
+
+            // ======== Mau5
+            noStroke();
+            // Blue 
+            fill('#12e6c8');
+            ellipse((width / 2) + h, (height / 2) + h + 50, diam2, diam2);
+
+            // Purple
+            fill('#a287f4');
+            ellipse((width / 2) - h, (height / 2) + h + 50, diam2, diam2);
+
+            // ==== Horiz
+            fill('#a287f4');
+            ellipse((width/2) + h + diam_small + 800, (height/2) + diam_mid, diam_small, diam_small);
+            fill('#12e6c8');
+            ellipse((width/2) - h - diam_small - 800, (height/2) + diam_mid, diam_small, diam_small);
+        
+
+        }
+    }
+// end draw
+}
+
+</script>
+
+</html>
+
+
+
