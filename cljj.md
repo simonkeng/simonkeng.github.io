@@ -84,6 +84,33 @@ You can make multiple at once.
 
 ----------
 
+# Tmux
+
+Terminal multiplexer. Useful for disconnecting from `ssh` sessions without terminating a process or script. Can also be used as a window manager, e.g. creating panes, tabs, etc. and moving between them. 
+
+### Create session:
+```
+tmux new -s <name>
+```
+### Attach: 
+```
+tmux a -t <name>
+```
+### Detach: 
+
+Hotkeys: `ctrl + b` then ` d`
+
+### List sessions:
+```
+tmux ls
+``` 
+### Kill session:
+```
+tmux kill-session -t <name>
+```
+
+----------
+
 # ping
 
 Check if your internet is working. Check if a website is running and the URL is live, or if anything is listening on a machine/server.
