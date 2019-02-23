@@ -84,7 +84,7 @@ You can make multiple at once.
 
 ----------
 
-# Tmux
+# tmux
 
 Terminal multiplexer. Useful for disconnecting from `ssh` sessions without terminating a process or script. Can also be used as a window manager, e.g. creating panes, tabs, etc. and moving between them. 
 
