@@ -2,7 +2,7 @@
 
 Simple walkthrough of a basic data science setup. 
 
-1. If using macOS, install [Homebrew](https://brew.sh/) 
+1. If using macOS, install [Homebrew](https://brew.sh/).
 
 ```bash
 
