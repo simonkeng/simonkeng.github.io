@@ -6,7 +6,7 @@
 
 - [RDKit + Conda + Jupyter in Docker](https://github.com/simonkeng/rdkit-jupyter-docker)
 - [NLP in 6 lines of Python](word2vec-in-6-lines.html)
-- [Data Science 0 to 60 Walkthrough](datasci-setup.md)
+- [Data Science Dev Environment](datasci-setup.md)
 - [A-frame experiment](aframe-app.html)
 - [Canvas learning](ameebo.html) and the [code](show_canvas_code.md), and more [canvas stuff here](canvas_stuff/exp.html) and [here](canvas_stuff/exptwo.html).
 
