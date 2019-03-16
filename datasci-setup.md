@@ -24,7 +24,7 @@ source activate env_name
 
 ```
 
-3. Install [Jupyter](https://jupyter.readthedocs.io/en/latest/install.html).
+4. Install [Jupyter](https://jupyter.readthedocs.io/en/latest/install.html).
 
 ```bash
 
@@ -34,7 +34,7 @@ pip install jupyter
 
 ```
 
-4. Install [Pandas](https://pandas.pydata.org/) and [NumPy](http://www.numpy.org/), if not installed already from anaconda.
+5. Install [Pandas](https://pandas.pydata.org/) and [NumPy](http://www.numpy.org/), if not installed already from anaconda.
 
 ```bash
 
