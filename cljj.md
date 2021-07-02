@@ -1,6 +1,8 @@
 # Command Line Jiu Jitsu
 
-Influenced and inspired by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ), tailored to *data scientists* needs and anyone new to [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), [git](https://en.wikipedia.org/wiki/Git), or [vim](http://www.vim.org/).
+Inspired by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ). Includes small recipes of common workflows. Might serve as _tldr_ reference for command line beginners.
+
+All examples assume `darwin` system using `bash`. I also use `fish` and `zsh`, so most examples should work across  shells.
 
 -----
 
