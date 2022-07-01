@@ -1,25 +1,26 @@
 # Home
 
-- [Command Line Jiu Jitsu](cljj.md)
+## Reference
 
-## Experiments & Projects
+- [Command Line Jiu Jitsu](reference/cljj.md)
+- How to setup a super basic [Data Science Dev Environment](reference/datasci-setup.md)
+
+## Experiments
 
 - [RDKit + Conda + Jupyter in Docker](https://github.com/simonkeng/rdkit-jupyter-docker)
-- [NLP in 6 lines of Python](word2vec-in-6-lines.html)
-- [Data Science Dev Environment](datasci-setup.md)
-- [A-frame experiment](aframe-app.html)
-- [Canvas learning](ameebo.html) and the [code](show_canvas_code.md), and more [canvas stuff here](canvas_stuff/exp.html) and [here](canvas_stuff/exptwo.html).
+- [NLP in 6 lines of Python](experiments/word2vec-in-6-lines.html)
+- Playing with [A-frame](experiments/aframe-app.html)
+- Playing with HTML5 `canvas`, [toy code](canvas_stuff/show_canvas_code.md) and a few examples [here](canvas_stuff/exp.html) and [here](canvas_stuff/exptwo.html).
+- [Multivariable calculus in Python](experiments/calculus.md)
 
+## Other
 
-## Random Things
+- [Random/non-tech](random/random.md)
 
-- [List Of Christmas Episodes From All My FavoriteShows](ChristmasEpisodeMarathon.md)
 
 ----------
 
 ### Contact
-
-<simondkeng@gmail.com>
 
 - [GitHub](https://github.com/simonkeng)
 - [LinkedIn](https://www.linkedin.com/in/simonkeng/)
