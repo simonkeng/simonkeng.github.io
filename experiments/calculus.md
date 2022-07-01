@@ -1,4 +1,4 @@
-## SymPy for Calculus
+# SymPy for Calculus
 
 ![Alt Text](animate.gif)
 
@@ -29,15 +29,6 @@ import sympy as sp
 from PIL import Image
 
 
-def get_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--name', '-n')
-    parser.add_argument('--min')
-    parser.add_argument('--max')
-    parser.add_argument('--step', '-s')
-    return parser.parse_args()
-
-
 x, y, z = sp.symbols('x y z')
 
 
@@ -53,7 +44,10 @@ def graph(f, xr: list, yr: list, image: str):
     ).save(image)
 
 
-def animate(cwd, gif, path, iterations):
+def animate(cwd: str, gif: str, path: str, iterations: int):
+    """
+    Collect plots in order and create gif.
+    """
     print('Collecting plots to generate animation.')
     images = [Image.open(f'{path}/{n}.png') for n in range(iterations)]
     images[0].save(gif,
@@ -88,12 +82,22 @@ def run_loop():
         animate(cwd, gif, tmpdir, iterations)
 
 
+def get_args() -> argparse.Namespace:
+    """
+    Parse CLI args
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--name', '-n')
+    parser.add_argument('--min')
+    parser.add_argument('--max')
+    parser.add_argument('--step', '-s')
+    return parser.parse_args()
+
+
 if __name__ == '__main__':
     run_loop()
 
 ```
-
-Resulting `animation.gif`:
 
 ![Alt Text](x-3-y-4.gif)
 
