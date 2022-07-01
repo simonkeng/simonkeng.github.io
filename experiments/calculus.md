@@ -1,4 +1,4 @@
-# SymPy for Calculus
+## SymPy for Calculus
 
 ![Alt Text](animate.gif)
 
@@ -11,7 +11,7 @@ CLI params are for passing min, max, and step values. Plots are generated for ev
 ## Usage
 
 ```bash
-python3 calculus.py --name "animate" --min "-5" --max "5" --step "0.3"
+python3 calculus.py --name "animation" --min "-5" --max "5" --step "0.3"
 ```
 
 ## Code
@@ -92,6 +92,8 @@ if __name__ == '__main__':
     run_loop()
 
 ```
+
+Resulting `animation.gif`:
 
 ![Alt Text](x-3-y-4.gif)
 
