@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 
 canvas_stuff/hide/*
+.DS_Store

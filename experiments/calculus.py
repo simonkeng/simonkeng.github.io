@@ -22,7 +22,7 @@ x, y, z = sp.symbols('x y z')
 
 
 def F(i: int = 0):
-    f = (x + i)**9 + y**7
+    f = (x + i)**3 + y**4
     return f
 
 

@@ -101,9 +101,31 @@ if __name__ == '__main__':
 
 ![Alt Text](x-3-y-4.gif)
 
+$$f(x, y) = (x + i)^{3} + y^{4}$$
+
+$$\scriptsize -5 \le i \le 7, step = 0.4$$
+
+
+## Nice printing:
+
+You can generate the Latex code for your functions (for use in markdown, by wrapping them with `$`):
+
+```ipython
+In [1]: import sympy
+In [2]: x, y, z = sympy.symbols('x y z')
+In [3]: sympy.print_latex(x**3 + y**4)
+x^{3} + y^{4}
+```
+
+Or enable Latex printing in ipython or Jupyter:
+
+```python
+sympy.init_printing()
+```
 
 ## Other ideas
 
 I'd like to plot derivatives and integrals to see their "movement" as second, third, fourth derivatives/integrals are performed. I'd also like to print LateX to the CLI, for prettiness. And upload the jupyter notebook I used for developing this, with more ideas.
 
 ![Alt Text](x-5-y-4.gif)
+
