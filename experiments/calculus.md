@@ -1,7 +1,3 @@
----
-layout: post
-katex: True
----
 # SymPy for Calculus
 
 ![Alt Text](animate.gif)
@@ -105,10 +101,9 @@ if __name__ == '__main__':
 
 ![Alt Text](x-3-y-4.gif)
 
-$$f(x, y) = (x + i)^{3} + y^{4}$$
+![Alt Text](func_image.png)
 
-$$\scriptsize -5 \le i \le 7, step = 0.4$$
-
+<img src="func_image.png" alt="drawing" width="200"/>
 
 ## Nice printing:
 
