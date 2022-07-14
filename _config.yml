@@ -1,2 +1,5 @@
 theme: jekyll-theme-cayman
 title: Simon Keng
+
+kramdown:
+  math_engine: katex
