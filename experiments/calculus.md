@@ -101,26 +101,12 @@ if __name__ == '__main__':
 
 ![Alt Text](x-3-y-4.gif)
 
-![Alt Text](func_image.png)
+![Alt Text](func_latex.png)
 
-<img src="func_image.png" alt="drawing" width="200"/>
+<!-- $$f(x, y) = (x + i)^{3} + y^{4}$$ -->
 
-## Nice printing:
+<!-- $$\scriptsize -5 \le i \le 7, step = 0.4$$ -->
 
-You can generate the Latex code for your functions (for use in markdown, by wrapping them with `$`):
-
-```ipython
-In [1]: import sympy
-In [2]: x, y, z = sympy.symbols('x y z')
-In [3]: sympy.print_latex(x**3 + y**4)
-x^{3} + y^{4}
-```
-
-Or enable Latex printing in ipython or Jupyter:
-
-```python
-sympy.init_printing()
-```
 
 ## Other ideas
 
