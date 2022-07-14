@@ -101,9 +101,8 @@ if __name__ == '__main__':
 
 ![Alt Text](x-3-y-4.gif)
 
-$$f(x, y) = (x + i)^{3} + y^{4}$$
-
-$$\scriptsize -5 \le i \le 7, step = 0.4$$
+<img src="https://render.githubusercontent.com/render/math?math=f(x, y) = (x + i)^{3} + y^{4}">
+<img src="https://render.githubusercontent.com/render/math?math=-5 \le i \le 7, step = 0.4$">
 
 
 ## Nice printing:
