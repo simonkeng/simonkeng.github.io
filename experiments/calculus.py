@@ -9,13 +9,6 @@ import sympy as sp
 from PIL import Image
 
 
-def get_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--name', '-n')
-    parser.add_argument('--min')
-    parser.add_argument('--max')
-    parser.add_argument('--step', '-s')
-    return parser.parse_args()
 
 
 x, y, z = sp.symbols('x y z')
@@ -23,19 +16,23 @@ x, y, z = sp.symbols('x y z')
 
 def F(i: int = 0):
     f = (x + i)**3 + y**4
+    print(type(f))
     return f
 
 
-def graph(f, xr: list, yr: list, image: str):
+def graph(f, xr: list, yr: list, image: str) -> None:
+    """
+    :param xr: range of x values
+    """
     sp.plotting.plot3d(
         (f, (x, xr[0], xr[1]), (y, yr[0], yr[1])),
         show=False
     ).save(image)
 
 
-def animate(cwd, gif, path, iterations):
+def animate(cwd: str, gif: str, tmpdir_path: str, iterations: int) -> None:
     print('Collecting plots to generate animation.')
-    images = [Image.open(f'{path}/{n}.png') for n in range(iterations)]
+    images = [Image.open(f'{tmpdir_path}/{n}.png') for n in range(iterations)]
     images[0].save(gif,
                    save_all=True,
                    append_images=images[1:],
@@ -68,6 +65,15 @@ def run_loop():
         gif = f'{tmpdir}/{args.name}.gif'
 
         animate(cwd, gif, tmpdir, iterations)
+
+
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--name', '-n', help='Filename for the output gif.')
+    parser.add_argument('--min')
+    parser.add_argument('--max')
+    parser.add_argument('--step', '-s')
+    return parser.parse_args()
 
 
 if __name__ == '__main__':
