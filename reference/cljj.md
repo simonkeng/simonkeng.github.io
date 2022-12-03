@@ -1,6 +1,6 @@
 # Command Line Jiu Jitsu
 
-Inspired by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ). Includes small recipes of common workflows. Might serve as _tldr_ reference for command line beginners.
+Inspired by [Command Line Kung Fu](https://books.google.com/books/about/Command_Line_Kung_Fu.html?id=HwOjoAEACAAJ).
 
 All examples assume `darwin` system using `bash`. I also use `fish` and `zsh`, so most examples should work across  shells.
 
@@ -8,94 +8,68 @@ All examples assume `darwin` system using `bash`. I also use `fish` and `zsh`, s
 
 # Ag
 
-Use `ag` to recursively search for `pattern` in `path`, similiar to grep or awk, but much faster. Read about it [here](https://github.com/ggreer/the_silver_searcher). `ag` searches within directories folder names and within files, sim
+[The silver searcher](https://github.com/ggreer/the_silver_searcher).
 
 ```bash
 ag <pattern> <path>
 ```
-### install
-
-	brew install the_silver_searcher
-
-Once downloaded, `man ag` will provide all the information you need about using this tool, like applying regex, counts, columns, or showing only file names.
-
-### how to use it
-
-	ag ABC1 ~/Users/keng/Projects/
-
-–where `ag` will search for the string `ABC1` **within** all the files and **file names**, recursively, down from `Projects/` to the very bottom of the directory tree.
-
 
 ----------
 
+# Disks
 
-# disk usage
+_How big is this?_
 
-Estimate the size of `file_path`
-
-    du -sh file_path
+```bash
+du -sh <path or file>
+```
 
 
 Estimate the size of every directory or file in the current directory
 
     du -sh *
 
-For more information visit this [stack exchange post](https://unix.stackexchange.com/questions/185764/how-do-i-get-the-size-of-a-directory-on-the-command-line).
-
 
 ----------
 
-# grep, ls, find
+# Finding X
 
-List all lines that contain a string matching `foo` in `file.txt`
+```bash
+grep <term> <file>
+```
 
-    grep foo file.txt
+File/dir search: `ls` piped to `grep`
 
-    grep -n foo file.txt
+```bash
+ls | grep <file/dir name>
+```
 
-–to see the line number.
+Recursive (and better) file/dir search: `find`
 
-
-
-List all files in the current directory named (or containing) the string `blah`
-
-    ls | grep blah
-
-Search /path/to/something/ for a file containing `9xyz` in its name.
-
-    ls /path/to/something/ | grep 9xyz
+```bash
+find . -name "<term>"
+```
 
 
-Same as example above except recursive search, and return paths if file name exists.
-
-    find . -name "*9xyz*"
-
-..will return the path(s) to any files containing `9xyz` in the file name.
-
-----------
 
 # touch
 
-Create files. Also update the date that a file was edited.
+Create file(s), or update the date that a file was modified.
+```bash
+touch README.md index.html index.css app.js Dockerfile
+```
 
-	$ touch file.txt
-
-You can make multiple at once.
-
-	$ touch index.html index.js index.css
-
-----------
 
 # tmux
 
 Terminal multiplexer. Useful for disconnecting from `ssh` sessions without terminating a process or script. Can also be used as a window manager, e.g. creating panes, tabs, etc. and moving between them. 
 
 ### Create session:
-```
+```bash
 tmux new -s <name>
 ```
 ### Attach: 
-```
+```bash
 tmux a -t <name>
 ```
 ### Detach: 
@@ -103,77 +77,53 @@ tmux a -t <name>
 Hotkeys: `ctrl + b` then ` d`
 
 ### List sessions:
-```
+```bash
 tmux ls
 ``` 
 ### Kill session:
-```
+```bash
 tmux kill-session -t <name>
 ```
 
-----------
 
 # ping
 
-Check if your internet is working. Check if a website is running and the URL is live, or if anything is listening on a machine/server.
 
-	$ ping www.google.com -c 3
+```bash
+ping www.google.com -c 3
+```
 
-The `-c` flag tells it to only ping three times. You can run `ping` without the flag, and watch the pinging happen. To stop it, press ctrl + c.
 
 
-----------
 
 # cat
 
-If you want to smash several files together, try using `cat`. Here we have three CSVs in our working directory.
+Concatenate (smash) files together:
 
 ```bash
 $ ls
-one.csv
-two.csv
-three.csv
+# one.csv
+# two.csv
+# three.csv
+
 $ cat *.csv >> all.csv
 ```
 
-then to sort the output by unique lines with `sort -u`
-
-	$ sort -u all.csv > sorted_all.csv
-
-Note: `>` will overwrite, `>>` will append.
-
+Sort by unique (`-u`) lines:
+```bash
+$ sort -u all.csv > sorted_all.csv
+```
 
 
-----------
+
 
 
 # history
 
-Save your bash history to a file
+```bash
+history > weird_hotfix_that_I_will_never_remember.txt
+```
 
-    history > foo.txt
-
-Find out which commands you use most often
-
-	history | awk '{print $2}' | sort | uniq -c | sort -rn | head
-
-----------
-
-
-# pip
-
-Find out what pip packages are installed
-
-    pip freeze
-
-If you want to save your pip packages in a file, e.g. `requirements.txt`
-
-    pip freeze > requirements.txt
-
-`requirements.txt` will be generated in the current working directory
-
-
-----------
 
 
 
@@ -181,59 +131,25 @@ If you want to save your pip packages in a file, e.g. `requirements.txt`
 
 [Tesseract](https://github.com/tesseract-ocr/tesseract) is an open source optical character recognition (OCR) command line tool that uses the `libtesseract` OCR engine.
 
-### install
 
-	brew install tesseract
+### Convert image to searchable PDF
 
+Take your image and convert it to a TIFF or JPG.
 
-### convert image to searchable PDF
+	tesseract document_image.tif output pdf
 
-First take your patent or article image, and convert it to a TIFF. On macOS, within the Preview application, go to File > Export, in the pop up window choose:
-
-1. Format: TIFF
-
-2. Compression: None or JPEG
-
-3. Resolution: 300 pixels/inch
-
-Then from the command line
-
-	tesseract patent123.tif output123 pdf
-
-tesseract will provide a readout to STDOUT while the OCR is running.
-
-Note: If Preview fails to export your image as a TIFF, then compression might be the solution. Choose compression: JPEG – and from the command line
-
-    tesseract patent123.jpg output123 pdf
-
-Another example is to go from `.png`, `.jpg`, `.tiff` ---> `.txt`.  With tesseract this task is trivial.
-
-	tesseract patent123.tif output123
-
-–the default output for tesseract is `.txt` format.
 
 ### OCR in other languages
 
-Default `lang` is english, but you can run tesseract with the `-l` flag and specify another language. Here is a list of common languages you might come accross, with their 3-charater ISO 639-2 language codes. For a full list of language codes, visit the [man page here.](https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc)
+Run tesseract with the `-l` to specify a language other than english. List of languages with their 3-character ISO 639-2 [language codes.](https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc)
 
-`deu` German
+- `deu` German
+- `fra` French
+- `jpn` Japanese
+- `kor` Korean
+- `chi_sim` Chinese simplified
+- `chi_tra` Chinese traditional
 
-`fra` French
-
-`jpn` Japanese
-
-`kor` Korean
-
-`chi_sim` Chinese simplified
-
-`chi_tra` Chinese traditional
-
-Example:
-
-	tesseract imagename outputfile -l jpn
-
-
-For more information see the [documentation](https://github.com/tesseract-ocr/tesseract/wiki/Documentation), [FAQ page](https://github.com/tesseract-ocr/tesseract/wiki/FAQ), and the [Wiki page](https://github.com/tesseract-ocr/tesseract/wiki). If you are having issues installing tesseract via homebrew, try running `brew doctor` and check [Stack Overflow](https://stackoverflow.com/) for assistance interpreting the output.
 
 
 ----------
@@ -241,7 +157,7 @@ For more information see the [documentation](https://github.com/tesseract-ocr/te
 
 # openSSL
 
-Generate a password using openSSL
+Generate a password with openSSL
 
     openssl rand -base64 48 | cut -c1-${1}
 
@@ -468,6 +384,16 @@ Clear all changes since the last commit, reset index, **reset the working direct
 
 
 Note: if you would like to show the current git repo status in your bash prompt, visit [this page](bash_rc_for_git_func.html)
+
+
+
+----------
+
+# Networking
+
+
+
+
 
 ----------
 
