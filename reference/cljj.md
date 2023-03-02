@@ -86,6 +86,42 @@ tmux kill-session -t <name>
 ```
 
 
+# screen
+
+Create named session:
+
+```bash
+screen -S <session-name>
+```
+
+Detach with `ctrl + A, d`.
+
+
+List sessions:
+
+```bash
+screen -ls
+```
+
+Attach to named session:
+
+```bash
+screen -x -S <session-name>
+```
+
+Kill named session:
+
+```bash
+screen -X -S <session number> quit
+```
+
+Attach to session (if there is only one):
+
+```bash
+screen -r
+```
+
+
 # ping
 
 
@@ -396,6 +432,25 @@ Note: if you would like to show the current git repo status in your bash prompt,
 
 
 ----------
+
+# Misc.
+
+Cool tools/utilities that I plan to write about (some are `brew` specific packages):
+
+- bmon
+- glances
+- mitmproxy
+- ipcalc
+- vnstat
+- neofetch
+- football
+- nmap
+- traceroute
+- scapy
+- lynx
+- tree
+
+
 
 ### Contact
 
